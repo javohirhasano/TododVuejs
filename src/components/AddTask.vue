@@ -1,5 +1,5 @@
 <template>
-  <form class="add">
+  <form class="add" @submit="onSubmit">
     <div class="form-control">
       <label for="text">Ism familiya</label>
       <input type="text" v-model="text" name="text" />
@@ -10,7 +10,7 @@
     </div>
     <div class="form-control form-control-check">
       <label for="text">Tekshirish</label>
-      <input class="chek" v-model="checkbox" type="checkbox" value="reminder" />
+      <input class="chek" v-model="reminder" name="checkbox" type="submit" />
     </div>
     <button class="batn2">Save Task</button>
   </form>
@@ -18,13 +18,25 @@
 <script>
 export default {
     name:"AddTask",
-
-  data(){
+data(){
     return{
-      text:"main",
+      text:"",
       day:"",
-      checkbox:true
+      reminder:false
   }  
+},
+methods:{
+  onSubmit(e){
+e.preventDefault()
+if(!this.text){
+ 
+  return
+}
+this.text=""
+this.day=""
+this.reminder=false
+  }
+
 }
 }
 </script>

@@ -28,6 +28,7 @@ export default {
       {
         id:1,
         text:"present simple",
+        day:"Salom",
         reminder:false
       },
         {

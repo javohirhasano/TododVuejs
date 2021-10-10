@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="containe col-10 col-lg-12 col-sm-8">
+    <div class="containe col-10 col-lg-12 col-md-8">
       <AddTask />
       <div class="input_batn">
         <button @click="AddTask(Addlist)" class="butn">Add-text</button>
