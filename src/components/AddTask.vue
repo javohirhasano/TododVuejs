@@ -2,15 +2,15 @@
   <form class="add">
     <div class="form-control">
       <label for="text">Ism familiya</label>
-      <input type="text" name="text" />
+      <input type="text" v-model="text" name="text" />
     </div>
     <div class="form-control">
       <label for="text">kun va vaqt</label>
-      <input type="text" name="day" />
+      <input type="day" v-model="day" name="day" />
     </div>
     <div class="form-control form-control-check">
       <label for="text">Tekshirish</label>
-      <input class="chek" type="checkbox" value="reminder" />
+      <input class="chek" v-model="checkbox" type="checkbox" value="reminder" />
     </div>
     <button class="batn2">Save Task</button>
   </form>
@@ -18,7 +18,14 @@
 <script>
 export default {
     name:"AddTask",
-    
+
+  data(){
+    return{
+      text:"main",
+      day:"",
+      checkbox:true
+  }  
+}
 }
 </script>
 <style >

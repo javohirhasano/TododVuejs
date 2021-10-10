@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <button v-on="onClick()" :style="{background:color}" class="btn btn-dark">main</button>
-  </div>
+  <div></div>
 </template>
 
 <script>

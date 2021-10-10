@@ -1,18 +1,21 @@
 <template>
-  <div class="container">
-    <AddTask />
-    <div class="input_batn">
-      <button @click="AddTask(Addlist)" class="butn">Add-text</button>
-    </div>
-    <div class="card" :key="task.id" v-for="task  in tasks">
-      <h1 class="write">{{task.text}}</h1>
-      <button @click="deletetask(task.id)" class="batn1">delete</button>
+  <div>
+    <div class="containe col-10 col-lg-12 col-sm-8">
+      <AddTask />
+      <div class="input_batn">
+        <button @click="AddTask(Addlist)" class="butn">Add-text</button>
+      </div>
+      <div class="cards" :key="task.id" v-for="task  in tasks">
+        <h1 class="write">{{task.text}}</h1>
+        <button @click="deletetask(task.id)" class="batn1">delete</button>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 import AddTask from "./AddTask"
+
 export default {
     name: "Header",
     components:{AddTask},
@@ -30,7 +33,6 @@ deletetask(v){
 </script>
 <style>
 body {
-  box-sizing: border-box;
   background: rgb(94, 9, 143);
   background: radial-gradient(
     circle,
@@ -45,7 +47,7 @@ header {
 .write {
   margin-left: 10px;
 }
-.card {
+.cards {
   width: 35 0px;
   height: 100px;
   margin-top: 10px;
@@ -63,12 +65,12 @@ header {
   padding: 20px;
   border-radius: 20px;
 }
-.container {
+.containe {
   width: 600px;
-  height: 740px;
+  height: 840px;
   border: 2px solid black;
   margin-top: 10%;
-  margin-left: 30%;
+  margin-left: 10%;
   padding: 10px 20px;
   border-radius: 20px;
   background: rgb(51, 71, 198);
@@ -92,5 +94,8 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+div {
+  display: inline-block;
 }
 </style>

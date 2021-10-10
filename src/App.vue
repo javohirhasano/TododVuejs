@@ -1,12 +1,12 @@
 <template>
-  <div class="containe">
+  <div class="containes">
     <Batn text="Add-Taxt" color="green" />
     <Header @delete-task="deletetask" :tasks="tasks"></Header>
-  
   </div>
 </template>
 
 <script>
+
 import Header from "./components/Header"
 import Batn from "./components/Batn"
 export default {
@@ -46,6 +46,9 @@ export default {
 </script>
 
 <style>
+body {
+  width: 100%;
+}
 button {
   background-color: blueviolet;
   color: aliceblue;
